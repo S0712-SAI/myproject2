@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Color Changer</title>
+  <style>
+   body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 50px;
+  background-color: lightblue;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+}
+ </style>
+</head>
+<body>
+  <h1>Simple Color Changer</h1>
+  <button id="changeColorBtn">Change Background Color</button>
+  <script>
+  const btn = document.getElementById('changeColorBtn');
+
+btn.addEventListener('click', () => {
+  const randomColor = `hsl(${Math.floor(Math.random() * 360)}, 70%, 70%)`;
+  document.body.style.backgroundColor = randomColor;
+});
+ </script>
+</body>
+</html>
